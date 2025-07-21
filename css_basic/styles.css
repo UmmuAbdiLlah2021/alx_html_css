@@ -1,0 +1,39 @@
+/* Make body and main flexible containers */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Ensure main is also a flex container for article and aside */
+main {
+    display: flex;
+    flex: 1; 
+    min-height: 0; 
+}
+
+/* Allow article and aside to scroll if content overflows */
+article,
+aside {
+    overflow: auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
+
+/* Article takes 3/4 width, aside takes 1/4 */
+article {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+}
+
+/* Optional styling for header and footer */
+header,
+footer {
+    background-color: #f2f2f2;
+    padding: 1rem;
+    border: 1px solid #ccc;
+}
